@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 
 from MD_Ultrasonic import distance_measure
-import engine
+import engine as Engine
 
 
 def detour():
