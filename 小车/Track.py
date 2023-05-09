@@ -6,11 +6,11 @@ import engine as Engine
 
 def detour():
     Engine.spin_left(0.2, 20)
-    Engine.run(0.5, 30)
+    Engine.forward(0.5, 30)
     Engine.right(0.2, 20)
-    Engine.run(0.5, 30)
+    Engine.forward(0.5, 30)
     Engine.right(0.2, 20)
-    Engine.run(0.5, 30)
+    Engine.forward(0.5, 30)
     Engine.left(0.2, 20)
     Engine.brake()
 
@@ -50,7 +50,7 @@ def auto_track(arg=None):
         Engine.right(35, None)
     # 处理直线
     elif TrackSensorLeftValue2 == False and TrackSensorRightValue1 == False:
-        Engine.run(35, None)
+        Engine.forward(35, None)
     # 避障处理
     MD_C = distance_measure()
     if MD_C == -1:
