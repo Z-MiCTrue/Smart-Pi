@@ -1,2 +1,2 @@
 # Smart-Pi
-Some tool scripts
+Some scripts for pi
