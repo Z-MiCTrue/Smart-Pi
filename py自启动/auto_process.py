@@ -20,9 +20,9 @@ class Process_pro:
         for i, args in enumerate(args_list):
             # daemon=True, 父线程结束, 子线程皆强制退出
             if args is None:
-                work_p = Process(target=func_list[i], daemon=False)
+                work_p = Process(target=func_list[i], daemon=True)
             else:
-                work_p = Process(target=func_list[i], args=args, daemon=False)
+                work_p = Process(target=func_list[i], args=args, daemon=True)
             self.process_list.append(work_p)
 
     def start_all(self):
@@ -45,7 +45,7 @@ def main():
         args_list.append((cmd, ))
     works = Process_pro(func_list, args_list)
     works.start_all()
-    # works.join_all()  # 进程阻塞
+    works.join_all()  # 进程阻塞
 
 
 if __name__ == '__main__':
