@@ -18,10 +18,10 @@ def main(mode):
         inherit = int(input('Select whether to inherit (0 & 1): '))
         if inherit:
             print('inherit base env')
-            os.system(f'python -m venv --system-site-packages --copies %{venv_name}%')
+            os.system(f'python -m venv --system-site-packages --copies {venv_name}')
         else:
             print('clear env')
-            os.system(f'python -m venv %{venv_name}%')
+            os.system(f'python -m venv {venv_name}')
         print('over')
     # upgrade_all
     elif mode == 1:
