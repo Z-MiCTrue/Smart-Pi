@@ -49,7 +49,11 @@ systemctl status auto-service.service
 journalctl -u auto-service -e
 ```
 
- 
+·停止服务
+
+```
+sudo systemctl start auto-service.service
+```
 
 4. 设置开机自启动
 
