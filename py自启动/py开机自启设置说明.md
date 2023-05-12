@@ -52,7 +52,7 @@ journalctl -u auto-service -e
 ·停止服务
 
 ```
-sudo systemctl start auto-service.service
+sudo systemctl stop auto-service.service
 ```
 
 4. 设置开机自启动
