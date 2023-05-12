@@ -24,7 +24,7 @@ WantedBy=multi-user.target
 2. 将该文件mystart.service复制到/etc/systemd/system目录下
 
 ```
-sudo cp /home/pi/mystart.service /etc/systemd/system/mystart.service
+sudo cp /home/pi/auto-service.service /etc/systemd/system/auto-service.service
 ```
 
  
@@ -34,19 +34,19 @@ sudo cp /home/pi/mystart.service /etc/systemd/system/mystart.service
 ·启动服务
 
 ```
-sudo systemctl start mystart.service
+sudo systemctl start auto-service.service
 ```
 
 ·查看服务状态
 
 ```
-systemctl status mystart.service
+systemctl status auto-service.service
 ```
 
 ·使用journalctl查看该服务的输出
 
 ```
-journalctl -u mystart -e
+journalctl -u auto-service -e
 ```
 
  
@@ -56,13 +56,13 @@ journalctl -u mystart -e
 ·开启
 
 ```
-sudo systemctl enable mystart.service
+sudo systemctl enable auto-service.service
 ```
 
 ·关闭
 
 ```
-sudo systemctl disable mystart.service
+sudo systemctl disable auto-service.service
 ```
 
 ·添加或修改配置文件后，需要重新加载
