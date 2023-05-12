@@ -55,6 +55,14 @@ journalctl -u auto-service -e
 sudo systemctl stop auto-service.service
 ```
 
+·清空日志
+
+```
+journalctl --vacuum-time=1d
+```
+
+
+
 4. 设置开机自启动
 
 ·开启
