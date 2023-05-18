@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 
-from MD_Ultrasonic import distance_measure
+from MD_Ultrasonic import hear_init, distance_measure
 import engine as Engine
 
 
@@ -54,6 +54,7 @@ def auto_track(arg=None):
 
 if __name__ == '__main__':
     Engine.motor_init()
+    hear_init()
     auto_track()
     Engine.brake()
     Engine.GPIO_quit()
