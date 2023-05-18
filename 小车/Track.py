@@ -5,13 +5,6 @@ import engine as Engine
 
 
 def detour():
-    Engine.spin_left(0.2, 20)
-    Engine.forward(0.5, 30)
-    Engine.right(0.2, 20)
-    Engine.forward(0.5, 30)
-    Engine.right(0.2, 20)
-    Engine.forward(0.5, 30)
-    Engine.left(0.2, 20)
     Engine.brake()
 
 
@@ -57,13 +50,10 @@ def auto_track(arg=None):
         MD_C = distance_measure()
         if MD_C == -1:
             detour()
-        else:
-            pass
-    else:
-        pass
 
 
 if __name__ == '__main__':
+    Engine.motor_init()
     auto_track()
     Engine.brake()
     Engine.GPIO_quit()
